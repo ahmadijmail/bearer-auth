@@ -48,6 +48,7 @@ async function handleGetUsers(req, res, next) {
     let come = req.user;
     res.status(200).json(req.user);
   } catch (e) {
+    console.error(e);
     next(e);
   }
 }
