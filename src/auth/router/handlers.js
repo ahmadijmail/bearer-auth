@@ -2,6 +2,10 @@
 
 const { users } = require("../models/index.js");
 
+function handelhome(req, res) {
+  res.status(200).send("Hello User");
+}
+
 async function handleSignup(req, res, next) {
   try {
     users
@@ -54,6 +58,7 @@ function handleSecret(req, res, next) {
 }
 
 module.exports = {
+  handelhome,
   handleSignup,
   handleSignin,
   handleGetUsers,
