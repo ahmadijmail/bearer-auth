@@ -12,8 +12,8 @@ const bearer = async (req, res, next) => {
 
     const validUser = await users
       .authenticateToken(token)
-      .then(async (x) => {
-        req.user = x;
+      .then(async (user) => {
+        req.user = user;
 
         next();
       })

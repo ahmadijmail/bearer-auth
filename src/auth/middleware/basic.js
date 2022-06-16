@@ -16,8 +16,8 @@ const basic = async (req, res, next) => {
   try {
     req.user = await users
       .authenticateBasic(username, pass)
-      .then((x) => {
-        req.user = x;
+      .then((user) => {
+        req.user = user;
 
         next();
       })
