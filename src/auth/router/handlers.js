@@ -34,7 +34,7 @@ async function handleSignin(req, res, next) {
   try {
     const user = {
       user: req.user,
-      token: req.user.token,
+      
     };
 
     res.status(200).json(user);
