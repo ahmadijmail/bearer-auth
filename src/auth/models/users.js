@@ -3,7 +3,7 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const userSchema = (sequelize, DataTypes) => {
-  const model = sequelize.define("u1", {
+  const model = sequelize.define("users", {
     username: {
       type: DataTypes.STRING,
       allowNull: false,
